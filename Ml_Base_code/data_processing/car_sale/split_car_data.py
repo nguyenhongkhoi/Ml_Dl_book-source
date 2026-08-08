@@ -3,7 +3,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 
 #path file goc
-file_path = r'D:\data_system\Ml_Dl_book-source\zero-to-mastery-ml\data\car-sales.csv'
+file_path = r'D:\data_system\Ml_Dl_book-source\Ml_Base_code\data_processing\car_sale\car-sales.csv'
 
 
 #read + processing data
