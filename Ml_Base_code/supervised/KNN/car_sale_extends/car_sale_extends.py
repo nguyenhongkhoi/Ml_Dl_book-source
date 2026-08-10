@@ -8,7 +8,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.neighbors import KNeighborsRegressor
 from sklearn.metrics import mean_absolute_error, r2_score
 
-file_path = r'D:\data_system\Ml_Dl_book-source\Ml_Base_code\KNN\car_sale_extends\car-sales-extended.csv'
+file_path = r'D:\data_system\Ml_Dl_book-source\Ml_Base_code\supervised\KNN\car_sale_extends\car-sales-extended.csv'
 df = pd.read_csv(file_path)
 
 # Tách biến độc lập (X) và biến mục tiêu (y)
@@ -52,7 +52,7 @@ sns.scatterplot(x=y_test, y=y_pred, alpha=0.7, color='blue')
 plt.plot([y_test.min(), y_test.max()], [y_test.min(), y_test.max()], 'r--', lw=2, label='Đường hoàn hảo (y=x)')
 plt.xlabel('Giá thực tế (Actual Price)')
 plt.ylabel('Giá dự đoán (Predicted Price)')
-plt.title('So sánh Giá thực tế vs Giá dự đoán (KNN K=5)')
+plt.title('So sánh Giá thực tế vs Giá dự đoán')
 plt.legend()
 plt.grid(True)
 plt.show()
@@ -70,7 +70,7 @@ for k in k_values:
 plt.figure(figsize=(8, 4))
 plt.plot(k_values, mae_scores, marker='o', color='green', linestyle='--')
 plt.xlabel('Giá trị K')
-plt.ylabel('Chỉ số MAE (Thấp hơn là tốt hơn)')
+plt.ylabel('Chỉ số MAE ')
 plt.title('Đồ thị chọn giá trị K tối ưu')
 plt.grid(True)
 plt.show()

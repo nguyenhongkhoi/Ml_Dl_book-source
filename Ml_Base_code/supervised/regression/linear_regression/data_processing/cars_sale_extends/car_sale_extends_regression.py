@@ -35,9 +35,7 @@ y_pred = model.predict(X_test)
 print(f"R2 Score: {r2_score(y_test, y_pred):.2f}")
 print(f"Mean Absolute Error (MAE): {mean_absolute_error(y_test, y_pred):.2f}$")
 
-# ==========================================
-# 6. VẼ ĐỒ THỊ
-# ==========================================
+
 plt.figure(figsize=(12, 5))
 
 # dthi 1: qhe 
