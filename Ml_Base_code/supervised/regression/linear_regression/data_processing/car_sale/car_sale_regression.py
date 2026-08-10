@@ -27,9 +27,8 @@ X_train, X_test, y_train, y_test = train_test_split(
     random_state=42
 )
 
-# ==========================================
-# 4. HUẤN LUYỆN MÔ HÌNH REGRESSION
-# ==========================================
+#model 
+
 model = LinearRegression()
 model.fit(X_train, y_train)
 
