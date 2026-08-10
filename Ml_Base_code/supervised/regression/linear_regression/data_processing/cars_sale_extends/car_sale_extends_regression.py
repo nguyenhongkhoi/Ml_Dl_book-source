@@ -6,7 +6,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_absolute_error, r2_score
 
-file_path = r'D:\data_system\Ml_Dl_book-source\Ml_Base_code\data_processing\cars_sale_extends\car-sales-extended.csv'
+file_path = r'D:\data_system\Ml_Dl_book-source\Ml_Base_code\supervised\regression\linear_regression\data_processing\cars_sale_extends\car-sales-extended.csv'
 
 df = pd.read_csv(file_path)
 

@@ -6,20 +6,16 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 
-# 1. Đường dẫn file gốc
-file_path = r'D:\data_system\Ml_Dl_book-source\Ml_Base_code\data_processing\car_sale\car-sales.csv'
+file_path = r'D:\data_system\Ml_Dl_book-source\Ml_Base_code\supervised\regression\linear_regression\data_processing\car_sale\car-sales.csv'
 
-# 2. Đọc và tiền xử lý dữ liệu
 df = pd.read_csv(file_path)
 df['Price'] = df['Price'].str.replace(r'[\$,]', '', regex=True).astype(float)
 
 X = df.drop('Price', axis=1)
 y = df['Price']
 
-# Mã hóa dữ liệu phân loại
 X_encoded = pd.get_dummies(X, columns=['Make', 'Colour'], drop_first=True, dtype=int)
 
-# 3. Chia tập dữ liệu (Train/Test)
 X_train, X_test, y_train, y_test = train_test_split(
     X_encoded, 
     y, 
