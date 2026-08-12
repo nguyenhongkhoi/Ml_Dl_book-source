@@ -28,7 +28,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 scaler = StandardScaler()
 # Fit và transform trên tập Train
 X_train_scaled = scaler.fit_transform(X_train)
-# Chỉ transform trên tập Test (dùng lại thông số từ Train)
+# Chỉ transform trên tập Test (dùng lại thông số từ Train)kk
 X_test_scaled = scaler.transform(X_test)
 
 #k = 5
